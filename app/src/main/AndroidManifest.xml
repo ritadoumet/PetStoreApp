@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androidproject.petstoreapp">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACTION_DIAL" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_paw"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_paw_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PetStoreApp">
+
+        <activity
+            android:name=".EmployeeLogServiceActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name=".EmployeeViewScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmployeeBookServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConfirmationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MakePaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewMyPetsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewMyCartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BrowseProductsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewApptsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BookApptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddAPetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainOwnerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainEmployeeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

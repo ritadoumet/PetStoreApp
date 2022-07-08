@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainEmployeeActivity"
+    android:background="@drawable/cats_background">
+
+    <RelativeLayout
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/brown"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="12dp"
+            android:drawableLeft="@drawable/ic_baseline_person_outline_16"
+            android:drawablePadding="5dp"
+            android:layout_alignBaseline="@id/home"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="HOME"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            />
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textSize="12dp"
+            android:drawableLeft="@drawable/ic_baseline_lock_open_16"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="5dp"
+            android:layout_alignBaseline="@id/username"
+            android:layout_gravity="right"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topNav"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/select_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:padding="5dp"
+            android:text="Select one of the options below:"
+            android:textAlignment="center"
+            android:textColor="@color/brown" />
+
+
+        <TextView
+            android:id="@+id/myPets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="My Pets"
+            android:textAlignment="center"
+            android:textColor="@color/brown" />
+
+        <Button
+            android:id="@+id/viewMyPetsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/beige"
+            android:textColor="@color/white"
+            android:text="View My Pets"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/addAPetBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/beige"
+            android:shadowColor="@color/brown"
+            android:text="Add a pet"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/appointments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:text="Appointments"
+            android:textAlignment="center"
+            android:textColor="@color/brown" />
+
+        <Button
+            android:id="@+id/bookApptBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/beige"
+            android:shadowColor="@color/brown"
+            android:textColor="@color/white"
+            android:text="Book an appointment"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/cancelApptBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/beige"
+            android:shadowColor="@color/brown"
+            android:text="View My Appointments"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:text="Products"
+            android:textAlignment="center"
+            android:textColor="@color/brown" />
+
+
+        <Button
+            android:id="@+id/browseProductsBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/beige"
+            android:textColor="@color/white"
+            android:shadowColor="@color/brown"
+            android:text="Browse products"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/viewMyCartBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/beige"
+            android:shadowColor="@color/brown"
+            android:textColor="@color/white"
+            android:text="View My Cart"
+            android:textSize="10dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/emergencyCallBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/brown"
+        android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"
+        android:text="place emergency vet call"
+        android:textSize="10dp" />
+
+</RelativeLayout>

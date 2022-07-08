@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainEmployeeActivity"
+    android:background="@drawable/cat_paws">
+
+    <RelativeLayout
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/brown"
+        android:layout_marginBottom="5dp">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="12dp"
+            android:drawableLeft="@drawable/ic_baseline_person_outline_16"
+            android:drawablePadding="5dp"
+            android:layout_alignBaseline="@id/home"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ADD A PET"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textSize="12dp"
+            android:drawableLeft="@drawable/ic_baseline_lock_open_16"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="5dp"
+            android:layout_alignBaseline="@id/username"
+            android:layout_gravity="right"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+
+    <TableLayout
+        android:id="@+id/enter_pet_input"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topNav"
+        android:layout_marginTop="0dp"
+        android:padding="5dp"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter your pet's information below:"
+            android:textAlignment="center"
+            android:textColor="@color/brown"
+            android:textSize="16dp" />
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Name"
+                android:textColor="@color/brown" />
+
+            <EditText
+                android:id="@+id/petName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#107E4D4D"
+                android:drawableLeft="@drawable/ic_baseline_pets_16"
+                android:drawablePadding="20dp"
+                android:hint="Pet Name"
+                android:padding="10dp"
+                android:textColor="@color/brown"
+                android:textColorHint="@color/beige"
+                android:textSize="14dp" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fur Color"
+                android:textColor="@color/brown" />
+
+            <AutoCompleteTextView
+                android:id="@+id/furTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Date of Birth"
+                android:textColor="@color/brown" />
+
+            <CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#107E4D4D" />
+
+        </TableRow>
+
+
+        <TableRow android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Species"
+                android:textColor="@color/brown" />
+
+            <Spinner
+                android:id="@+id/spinnerSpecies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+    <Button
+        android:id="@+id/addPetBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/brown"
+        android:textColor="@color/white"
+        android:text="Add Pet"
+        android:textSize="10dp" />
+
+</RelativeLayout>

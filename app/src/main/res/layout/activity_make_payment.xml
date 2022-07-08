@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainEmployeeActivity"
+    android:background="@drawable/cat_paws">
+
+    <RelativeLayout
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/brown"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="12dp"
+            android:drawableLeft="@drawable/ic_baseline_person_outline_16"
+            android:drawablePadding="5dp"
+            android:layout_alignBaseline="@id/home"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="MAKE PAYMENT"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textSize="12dp"
+            android:drawableLeft="@drawable/ic_baseline_lock_open_16"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="5dp"
+            android:layout_alignBaseline="@id/username"
+            android:layout_gravity="right"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/paymtAmtText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topNav"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Payment Amount: "
+        android:textColor="@color/brown"
+        android:textSize="20dp"></TextView>
+
+    <TextView
+        android:id="@+id/paymtAmtVal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paymtAmtText"
+        android:gravity="center"
+        android:text="$30"
+        android:textColor="@color/brown"
+        android:textSize="35dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/finishPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/brown"
+        android:paddingLeft="30dp"
+        android:paddingTop="15dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="15dp"
+        android:text="Finish Payment"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/selectPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymtAmtVal"
+        android:layout_marginTop="70dp"
+        android:gravity="center"
+        android:text="Select Payment Method"
+        android:textColor="@color/brown"
+        android:textSize="20dp" />
+
+    <RadioGroup
+        android:id="@+id/radioPaymentType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/selectPaymentMethod">
+
+        <RadioButton
+            android:id="@+id/byCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/brown"
+            android:text="By Card" />
+
+        <RadioButton
+            android:id="@+id/payPal"
+            android:layout_width="wrap_content"
+            android:textColor="@color/brown"
+            android:layout_height="wrap_content"
+            android:text="PayPal" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/byPayPalLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioPaymentType"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:visibility="gone">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/payPalEmail"
+            android:hint="PayPal Email"
+            android:textColor="@color/brown"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/beige"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="7dp"
+            android:padding="15dp"
+            android:background="#107E4D4D"
+            android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
+            android:drawablePadding="15dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/payPalPass"
+            android:hint="PayPal Password"
+            android:textColor="@color/brown"
+            android:textColorHint="@color/beige"
+            android:inputType="textPassword"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="7dp"
+            android:padding="15dp"
+            android:background="#107E4D4D"
+            android:drawableLeft="@drawable/ic_baseline_123_24"
+            android:drawablePadding="15dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/byCardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioPaymentType"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:visibility="gone">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardNumber"
+            android:hint="Card Number"
+            android:inputType="text"
+            android:maxLength="19"
+            android:textColor="@color/brown"
+            android:textColorHint="@color/beige"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="7dp"
+            android:padding="15dp"
+            android:background="#107E4D4D"
+            android:drawableLeft="@drawable/ic_baseline_credit_card_24"
+            android:drawablePadding="15dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardCVV"
+            android:hint="CVV Number"
+            android:textColor="@color/brown"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:textColorHint="@color/beige"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="7dp"
+            android:padding="15dp"
+            android:background="#107E4D4D"
+            android:drawableLeft="@drawable/ic_baseline_123_24"
+            android:drawablePadding="15dp"
+            />
+    </LinearLayout>
+</RelativeLayout>

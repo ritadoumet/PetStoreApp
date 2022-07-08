@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainEmployeeActivity"
+    android:background="@drawable/cat_paws">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="0dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+        android:id="@+id/topNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:background="@color/brown"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="12dp"
+            android:drawableLeft="@drawable/ic_baseline_person_outline_16"
+            android:drawablePadding="5dp"
+            android:layout_alignBaseline="@id/home"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="BOOK APPOINTMENT"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:textSize="12dp"
+            android:drawableLeft="@drawable/ic_baseline_lock_open_16"
+            android:layout_alignParentRight="true"
+            android:drawablePadding="5dp"
+            android:layout_alignBaseline="@id/username"
+            android:layout_gravity="right"
+            android:textColor="@color/white"/>
+
+
+    </RelativeLayout>
+
+             <TextView
+        android:id="@+id/enter_bkg_info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="@color/brown"
+        android:text="Enter your booking info below"
+        android:layout_margin="20dp"
+        android:layout_below="@id/topNav"/>
+
+            <TextView
+                android:id="@+id/pet_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/enter_bkg_info_text"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Pet: "
+                android:textColor="@color/beige" />
+
+            <Spinner
+                android:id="@+id/pets_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/enter_bkg_info_text"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@id/pet_text"
+                android:backgroundTint="@color/beige" />
+
+            <TextView
+                android:id="@+id/date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date: "
+                android:textColor="@color/beige"
+                android:layout_below="@id/pet_text"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"/>
+
+            <CalendarView
+                android:id="@+id/booking_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pets_list"
+                android:layout_toRightOf="@id/date_text"
+                android:background="@color/transparentBeige"/>
+
+            <TextView
+                android:id="@+id/opening_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/booking_date"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toRightOf="@id/hour_text"
+                android:text="Our staff are available everyday, from 8 till 16 O'clock"
+                android:textColor="@color/beige"
+                android:textStyle="italic" />
+            <TextView
+                android:id="@+id/hour_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/opening_hours"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:text="Hour: "
+                android:textColor="@color/beige" />
+
+            <EditText
+                android:id="@+id/hour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/opening_hours"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@id/hour_text"
+                android:background="#107E4D4D"
+                android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                android:drawablePadding="20dp"
+                android:hint="Appointment Hour"
+                android:inputType="number"
+                android:maxLength="2"
+                android:padding="10dp"
+                android:textColor="@color/brown"
+                android:textColorHint="@color/beige"
+                android:textSize="14dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/service1_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/service1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Service 1: "
+                    android:textColor="@color/beige" />
+
+                <Spinner
+                    android:id="@+id/service1_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/beige" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/service2_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/service1_layout"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/service2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Service 2: "
+                    android:textColor="@color/beige" />
+
+                <Spinner
+                    android:id="@+id/service2_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/beige" />
+
+                <Button
+                    android:id="@+id/remove_service2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/beige"
+                    android:text="remove"
+                    android:textSize="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/service3_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/service2_layout"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/service3_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Service 2: "
+                    android:textColor="@color/beige" />
+
+                <Spinner
+                    android:id="@+id/service3_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/beige" />
+
+                <Button
+                    android:id="@+id/remove_service3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:backgroundTint="@color/beige"
+                    android:text="remove"
+                    android:textSize="10dp"
+                    android:padding="5dp"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/add_service_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/brown"
+            android:text="Add Service"
+            android:shadowColor="@color/white"
+            android:shadowRadius="1"
+            android:shadowDy="2"
+            android:shadowDx="-2"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+        <Button
+            android:id="@+id/book_appt_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Appointment"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/brown"/>
+
+    </LinearLayout>
+</ScrollView>
